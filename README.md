@@ -1,5 +1,5 @@
-# Simple pages for:
+# Pages for:
 
 - [Flávio Lemos]()
 
-I'll add more soon
+I'll add more soon  
