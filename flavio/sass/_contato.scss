@@ -1,0 +1,96 @@
+#contato {
+  padding: $padding-section;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/computer.png');
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+
+  h2 {
+    @include titulo-transparente;
+    display: inline-block;
+    margin-top: -3rem;
+    padding: 1.5rem 5rem;
+    font-size: 4rem;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.form {
+  margin: 6rem 0;
+  width: 65%;
+
+  .btn {
+    font-family: inherit;
+    font-size: 2.6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    cursor: pointer;
+  }
+}
+
+.campos {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  color: $cor-clara;
+  font-family: inherit;
+  font-size: 2.2rem;
+  background-color: transparent;
+  border: 2px solid $cor-clara;
+  border-radius: 3px;
+
+  &:focus {
+    border-color: $cor-destaque;
+    box-shadow: 0 1px 8px rgba($cor-destaque, 0.5);
+
+    &:invalid {
+      border-color: crimson;
+      box-shadow: 0 1px 8px rgba(crimson, 0.5);
+    }
+  }  
+}
+
+.links {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  width: 35%;
+  margin: 6rem 0;
+}
+
+.creditos {
+  position: relative;
+  font-size: 1.4rem;
+  color: $cor-clara;
+
+  div {
+    display: inline;
+    position: absolute;
+  }
+
+  .imagem {
+    bottom: 1rem;
+    left: 0;
+  }
+
+  .dev {
+    bottom: 1rem;
+    right: 0;
+    
+    a {
+      color: $cor-destaque;
+      transition: color .3s;
+
+      &:hover {
+        color: darken($cor-destaque, 5%);
+        border-bottom: 2px solid darken($cor-destaque, 5%);
+      }
+    }
+  }
+}

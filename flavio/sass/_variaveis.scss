@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Eras Demi ITC";
+  src: url('eras-demi-itc.ttf');
+}
+
+@font-face {
+  font-family: "Eras Bold ITC";
+  src: url('eras-bold-itc.ttf');
+}
+
+$fonte: 'Eras Demi ITC', sans-serif;
+$fonte-negrito: 'Eras Bold ITC', sans-serif;
+
+$padding-section: 10rem;
+
+$cor-destaque: #40a8c7;
+$cor-escura: #141818;
+$cor-clara: #eee;
+
+$bp-grande: 62.5em;     // 1000px
+$bp-medio: 50em;        // 800px
+$bp-pequeno: 37.5em;    // 600px
+
+@mixin titulo-transparente {
+  color: #000;
+  background-color: $cor-clara;
+  mix-blend-mode: screen;
+}

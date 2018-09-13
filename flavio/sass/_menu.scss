@@ -1,0 +1,110 @@
+.menu {
+
+  &-botao {
+    position: fixed;    
+    height: 5rem;
+    width: 5rem;
+    top: 5rem;
+    right: 5rem;
+    background-color: $cor-clara;
+    border: none;
+    border-radius: 3px;
+    z-index: 100;
+    box-shadow: 0 1rem 3rem rgba($cor-escura, .1);
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  &-icone {
+    position: relative;
+    margin-top: 1.6rem;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 2.5rem;
+      height: 3px;
+      background-color: $cor-escura;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &-botao:hover &-icone::before  {
+    top: -.7rem;
+  }
+
+  &-botao:hover &-icone::after {
+    top: .7rem;
+  }
+  
+
+  &-fundo {
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    top: 5.5rem;
+    right: 5.5rem;
+    border-radius: 3px;
+    background-color: $cor-escura;
+    z-index: 90;
+    transition: transform .8s;
+  }
+
+  nav {
+    position: fixed;
+    height: 100vh;
+    width: 0;
+    top: 0;
+    right: 0;
+    z-index: 95;
+    opacity: 0;
+    transition: opacity .4s, width .8s;
+  }
+
+  &-lista {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+
+  &-item {
+    margin: 1.5rem;
+    overflow: hidden;
+  }
+
+  &-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    color: $cor-clara;
+    background-image: linear-gradient(to right, darken($cor-destaque, 5%) 0, darken($cor-destaque, 5%) 50%, transparent 50%);
+    background-size: 220% 100%;
+    background-position: right -.5rem top;
+    transition: all .5s cubic-bezier(.47,.35,.48,1);
+
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+}

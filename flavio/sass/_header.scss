@@ -1,0 +1,49 @@
+header {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/computer.png');
+  background-size: cover;
+  background-position: top; 
+}
+
+.apresentacao {
+  display: inline-block;
+  position: absolute;
+  top: 33%;
+  left: 15%;
+
+  h1 {
+    display: none; 
+  }
+
+  span,
+  h2 {
+    @include titulo-transparente;
+    display: block;
+    font-family: $fonte-negrito;
+    font-weight: normal;
+  }
+
+  span {  
+    margin: 1.5rem 2rem;
+    padding: .5rem 4rem;
+    font-size: 6rem;
+    letter-spacing: 9;    
+  }
+
+  .nome {
+    margin-right: 9rem;
+  }
+
+  .sobrenome {
+    margin-left: 9rem;
+  }
+
+  h2 {
+    margin-left: 2rem;
+    margin-right: 1.8rem;
+    padding: .5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+}

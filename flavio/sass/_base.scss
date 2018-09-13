@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;  
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medio) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $fonte;
+  color: $cor-escura;   
+  font-size: 1.8rem;
+  overflow-x: hidden;
+}
+
+.btn {
+  position: relative;
+  padding: 1.5rem 2.5rem;
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: $cor-clara;
+  background: linear-gradient(to right, darken($cor-destaque, 5%) 0%, darken($cor-destaque, 5%) 50%, $cor-destaque 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border: none;
+  border-radius: 3px;
+  transition: all .5s cubic-bezier(.47,.35,.48,1.09);
+
+  &:hover {
+    background-position:0 0;
+  }
+}
+
+// menu
+.menu {
+  .exibir {
+    opacity: 1;
+    width: 100%;
+  }
+  
+  .fundo {
+    transform: scale(80);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+svg {
+  width: 5rem;
+  height: 5rem;
+  fill: $cor-clara;
+}
+
+::selection {
+  background-color: $cor-escura;
+  color: $cor-clara;
+}

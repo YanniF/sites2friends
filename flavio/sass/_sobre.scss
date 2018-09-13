@@ -1,0 +1,65 @@
+#sobre {
+  padding: $padding-section;
+  background-color: $cor-clara;
+  text-align: center;
+ 
+  h2 {
+    display: inline-block;
+    padding: 2rem 5rem;
+    background-color: $cor-escura;
+    color: $cor-clara; 
+    font-size: 3rem;
+    font-weight: normal;
+  }
+}
+
+.descricao {
+  display: flex;
+  margin: 8rem 0 6rem;
+  font-size: 2rem;
+
+  img {
+    display: inline-block;
+    width: 20%;
+    margin-right: 5%;
+    padding: 1rem;
+    border: 3px solid $cor-escura;
+  }
+
+  p {
+    display: inline-block;
+    width: 75%;
+    text-align: justify;
+    line-height: 2;
+  }
+}
+
+.educacao {
+  text-align: justify;
+  padding-bottom: 4rem;
+
+  h3 {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 3rem;
+    border-bottom: 5px solid $cor-destaque;
+  }
+
+  dl {
+    margin: 2rem 0 4rem 1.6rem;
+    line-height: 1.8;
+
+    span {
+      float: right;
+    }
+  }
+
+  dt {
+    display: list-item;
+    list-style-type: square;
+  }
+
+  dt:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
